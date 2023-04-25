@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+
+body {
+	font-family: 'Cairo', sans-serif;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #aa00ff;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(0, 210, 210);
+	border-radius: 100px;
+	height: 10px;
+}
+
+.nav {
+	display: flex;
+	width: 100%;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-color: black;
+	padding: 0;
+}
+
+.nav img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 250px;
+	cursor: default;
+}
+
+.nav-items {
+	top: 0;
+	margin: 0;
+	margin-left: 770px;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+.nav-items li {
+	display: inline-block;
+}
+
+.nav-items li a {
+	position: relative;
+	margin-top: 17px;
+	display: inline-block;
+	padding: 20px;
+	padding-bottom: 5px;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	transition: color 0.5s;
+}
+
+.nav-items li a i {
+	color: white;
+	position: sticky;
+	padding: 5px;
+}
+
+
+.nav-items li a i:hover,
+.nav-items li a:hover i {
+	color: white;
+	position: sticky;
+	color: cyan;
+	transition: ease-in-out .2s;
+}
+
+.nav-items li a:hover {
+	color: cyan;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	transition: ease-in-out 0.4s;
+}
+
+.nav-items li a::before {
+	position: absolute;
+	content: "";
+	width: 80%;
+	height: 1px;
+	background-color: cyan;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: ease-in-out .2s;
+}
+
+.nav-items li a:hover::before {
+	opacity: 1;
+}
+
+.container {
+	background-color: var(--primary-color);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px 1px rgb(0, 0, 0, 12%);
+	padding: 45px;
+	margin: 15px 0;
+	width: 950px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto 1fr;
+	grid-template-areas: 
+	"images info"
+	"images description";
+	grid-gap: 35px;
+}
+
+.box .images {
+	grid-area: images;
+	display: grid;
+}
+
+.box .images .img-holder img {
+	width: 100%;
+	display: block;
+	border-radius: 10px;
+}
+
+.box .basic-info {
+	grid-area: info;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.box .basic-info .product-price {
+	color: rgb(0, 204, 0);
+}
+
+.box .basic-info .rate {
+	color: rgb(236, 236, 0);
+}
+
+.box .basic-info span {
+	font-weight: 800;
+	font-size: 25px;
+}
+
+.box .basic-info .options a {
+	color: white;
+	background-color: orange;
+	display: inline-block;
+	text-align: center;
+	padding: 10px 15px;
+	width: 300px;
+	text-decoration: none;
+	font-weight: 1000;
+	font-size: 20px;
+	border-radius: 90px;
+	transition: .2s;
+}
+
+.box .basic-info .options a:hover {
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+	transition: ease-in-out .2s;
+}
+
+.box .description p {
+	color: gray;
+	font-size: 25px;
+	line-height: 1.5;
+}
+
+footer {
+	left: 0;
+	right: 0;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.844);
+	text-align: center;
+	margin: 0;
+	margin-top: 30px;
+	bottom: 0;
+}
+
+footer h3 {
+	padding: 10px;
+}
+
+footer a {
+	color: white;
+}
+
+footer a i {
+	padding: 20px;
+	transition: .2s;
+}
+
+footer .facebook:hover {
+	color: blue;
+	transition: ease-in-out 0.2s;
+}
+
+footer .twitter:hover {
+	color: cyan;
+	transition: ease-in-out 0.2s;
+}
+
+footer .instagram:hover {
+	color: #bd1460;
+	transition: ease-in-out 0.2s;
+}
+
+footer .youtube:hover {
+	color: red;
+	transition: ease-in-out 0.2s;
+}
+
+footer p {
+	padding: 10px;
+}
